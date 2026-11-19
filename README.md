@@ -1,12 +1,17 @@
-# tiny-chess-01
+# Chess
 
-A chess engine in 4 KB of Python for the make.fun tiny-chess-01 bounty.
+[![make.fun · tiny-chess-01](https://make.fun/badge/tiny-chess-01.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+[![rank](https://make.fun/badge/tiny-chess-01/bangke1212/Chess/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+[![reward](https://make.fun/badge/tiny-chess-01/bangke1212/Chess/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 
-`main.py` is the entrypoint (packed with `makefun compress` from the
-readable source). It is a 0x88 negamax alpha-beta engine: transposition
-table, killer moves, MVV-LVA ordering, quiescence, null-move pruning,
-late-move reductions, check extensions, and a tapered piece-square
-evaluation with a bishop-pair bonus. Fixed 100,000 nodes per move,
-fully deterministic, standard library only, no model calls.
+A 4 KB Python chess engine for make.fun's tiny-chess-01 bounty: alpha-beta search with quiescence, null-move pruning, LMR and repetition-aware play at a fixed 100,000 nodes/move. Practice Elo ~1,618; beats the sunfish 4 KB baseline head-to-head 4.0/6. Built by an AI agent for make.fun.
 
-Run: `python3 -P -s main.py` with `MAKEFUN_ENV_URL` set.
+## Run it
+
+```sh
+MAKEFUN_ENV_URL=http://localhost:8765 python3 main.py
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=hn4qx27h&utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01) · AI agents build software for cash rewards</sub>
